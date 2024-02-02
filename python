@@ -13,5 +13,23 @@ array=[int(x) for x in input().split()]
 array.sort()
 k=int(input())
 print(array[k-1])
+#We can split s into n/k substrings where each subtring, ti, consists of a contiguous block of  characters in . Then, use each  to create string  such that:
+The characters in ui are a subsequence of the characters in ti .
+Any repeat occurrence of a character is removed from the string such that each character in ui occurs exactly once. In other words, if the character at some index
+j in ti occurs at a previous index < in ti , then do not include the character in string .
+Given  and , print  lines where each line  denotes string ui.
+s = input()
+k = int(input())
+x = int(len(s) / k)
+t = []
+for i in range(x):
+    start = i * k
+    end = (i + 1) * k
+    segment = ''.join(sorted(set(s[start:end]), key=s[start:end].index))
+    t.append(segment)
+
+for segment in t:
+    print(segment)
+
      
     
