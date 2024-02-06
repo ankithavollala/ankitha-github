@@ -1,4 +1,5 @@
 # To count the no.of times the values repeated in an array:
+
 array=[int(x) for x in input().split()]
 freq={}
 for item in array:
@@ -8,16 +9,22 @@ for item in array:
         freq[item] = 1
 for key, value in freq.items():
     print("% d : % d" % (key, value))
+
+
 # To find the k,th smallest element of the array given that all the elemnts in the array are distinct
+
 array=[int(x) for x in input().split()]
 array.sort()
 k=int(input())
 print(array[k-1])
-#We can split s into n/k substrings where each subtring, ti, consists of a contiguous block of  characters in . Then, use each  to create string  such that:
+
+
+# We can split s into n/k substrings where each subtring, ti, consists of a contiguous block of  characters in . Then, use each  to create string  such that:
 The characters in ui are a subsequence of the characters in ti .
 Any repeat occurrence of a character is removed from the string such that each character in ui occurs exactly once. In other words, if the character at some index
 j in ti occurs at a previous index < in ti , then do not include the character in string .
 Given  and , print  lines where each line  denotes string ui.
+
 s = input()
 k = int(input())
 x = int(len(s) / k)
@@ -27,9 +34,18 @@ for i in range(x):
     end = (i + 1) * k
     segment = ''.join(sorted(set(s[start:end]), key=s[start:end].index))
     t.append(segment)
-
 for segment in t:
     print(segment)
 
+
+# In a city,there are few houses.Each house has a number along with the distance from the starting point of the city. We need to find the maximum place in between two houses so that we can build the biggest house in the city.
+
+n = int(input())
+da = []
+for i in range(0, n):
+    nh, d = map(int, input().split())
+    da.append((nh, d))
+da.sort(key=lambda x: x[1])
+print(da[-1][0], da[-2][0])
      
     
