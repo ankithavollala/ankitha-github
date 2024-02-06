@@ -1,0 +1,16 @@
+# Python-based Email Slicer
+
+To make an email slicer in Python, we need to write a program that can obtains the email's username and domain name.
+We must split the email into two strings using the '@' separator. 
+CODE:
+We accept user input and, we use the strip feature to eliminate any white space.
+Then we look for the index of the user input's '@' symbol.
+The index is then saved in a variable called domain name, which is used to separate the email into two parts: the user name and the domain.
+email = input("Enter Your Email: ").strip()
+username = email[:email.index("@")]
+domain_name = email[email.index("@")+1:]
+format_ = (f"Your user name is '{username}' and your domain is '{domain_name}'")
+print(format_)
+Output:
+Enter Your E-mail:ankithavollala@gmail.com
+Your user name is'ankithavollala' and your domain is'gmail.com'
