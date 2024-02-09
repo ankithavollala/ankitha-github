@@ -47,5 +47,18 @@ for i in range(0, n):
     da.append((nh, d))
 da.sort(key=lambda x: x[1])
 print(da[-1][0], da[-2][0])
+
+# To check whether an array is palinArray or not i.e., each entered element in the array is palindrome
+
+n=int(input())
+a=[]
+for i in range(n):
+    a.append(int(input()))
+if all(str(num)==str(num)[::-1] for num in a):
+    print("yes")
+else:
+    print("no")
+
+
      
     
