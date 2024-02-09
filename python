@@ -59,6 +59,23 @@ if all(str(num)==str(num)[::-1] for num in a):
 else:
     print("no")
 
+# GCD of two numbers
+
+n = int(input())
+m = int(input())
+f1 = [1]
+f2 = [1]
+for i in range(2, n + 1):
+    if n % i == 0:
+        f1.append(i)
+for i in range(2, m + 1):
+    if m % i == 0:
+        f2.append(i)
+f1.sort()
+f2.sort()
+gcd = max(set(f1) & set(f2))
+print( gcd)
+
 
      
     
