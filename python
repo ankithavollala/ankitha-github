@@ -92,6 +92,22 @@ for i in range(n):
         l.remove(size) 
 print(tprice)
 
+# Dr. John Wesley has a spreadsheet containing a list of student's ID,MARKS,NAME and CLASS .
+Your task is to help Dr. Wesley calculate the average marks of the students.
+
+from collections import namedtuple
+n=int(input())
+fields=input().split()
+total_marks=0
+for student in range(n):
+    students = namedtuple('student',fields)
+    ID, MARKS, NAME, CLASS =input().split()
+    student=students(ID,MARKS,NAME,CLASS)
+    total_marks+=int(student.MARKS)
+print(total_marks/n)    
+
+
+
 
 
      
